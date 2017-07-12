@@ -1,0 +1,12 @@
+Description=Serve noip
+After=NetworkManager.service
+
+[Service]
+User=pouya
+Group=pouya
+WorkingDirectory=/home/pouya/git/noip
+Environment="PATH=/home/pouya/git/noip/venv/bin"
+ExecStart=/home/pouya/git/noip/venv/bin/python main.py
+
+[Install]
+WantedBy=multi-user.target
